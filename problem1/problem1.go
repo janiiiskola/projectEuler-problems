@@ -15,34 +15,12 @@ import (
 )
 
 func main() {
-
-	// Track the execution time
 	defer util.TrackExecutionTime(time.Now())
-
-	// Store the sum of values
-	var sum float64
-
-	// Loop integers below 1000
-	var i float64
-	for ; i < 1000; i++ {
-		// If i divided by 3 or 5 is whole number, increase the sum
-		if isWhole(i/3) == true || isWhole(i/5) == true {
+	sum := 0
+	for i := 0; i < 1000; i++ {
+		if i%3 == 0 || i%5 == 0 {
 			sum += i
 		}
 	}
-
-	// Print the final sum
-	log.Printf("Result: %v", sum)
-
-}
-
-// isWhole returns true if given float is whole number
-func isWhole(nro float64) bool {
-
-	if nro == float64(int64(nro)) {
-		return true
-	} else {
-		return false
-	}
-
+	log.Printf("Result: %d", sum)
 }
