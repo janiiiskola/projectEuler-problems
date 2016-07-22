@@ -10,11 +10,8 @@ import (
 func main() {
 	defer util.TrackExecutionTime(time.Now())
 
-	a := [2]int{1, 1}
-	sum := 0
-	i := 1
-
-	for i < 4000000 {
+	a, sum, i := [2]int{1, 1}, 0, 0
+	for i < 4e6 {
 		i = a[0] + a[1]
 		a[0] = a[1]
 		a[1] = i
@@ -22,7 +19,6 @@ func main() {
 			sum += i
 		}
 	}
-
-	log.Println("Result: %d", sum)
+	log.Printf("Result: %d", sum)
 
 }
