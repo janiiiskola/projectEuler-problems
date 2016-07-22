@@ -11,13 +11,13 @@ import (
 	"log"
 	"time"
 
-	"github.com/janiiiskola/projectEuler-problems/tools"
+	"github.com/janiiiskola/projectEuler-problems/util"
 )
 
 func main() {
 
 	// Track the execution time
-	defer tools.TrackExecutionTime(time.Now())
+	defer util.TrackExecutionTime(time.Now())
 
 	// Store the sum of values
 	var sum float64
