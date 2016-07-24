@@ -21,5 +21,4 @@ func main() {
 	}
 
 	log.Printf("Result: %d", res)
-
 }

@@ -18,11 +18,12 @@ func main() {
 	defer util.TrackExecutionTime(time.Now())
 
 	sum := 0
+
 	for i := 0; i < 1000; i++ {
 		if i%3 == 0 || i%5 == 0 {
 			sum += i
 		}
 	}
-	log.Printf("Result: %d", sum)
 
+	log.Printf("Result: %d", sum)
 }
